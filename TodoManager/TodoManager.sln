@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoManager.Domain", "TodoManager.Domain\TodoManager.Domain.csproj", "{3B593C67-FFC7-4584-92C9-765A53EB04B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoManager.Application", "TodoManager.Application\TodoManager.Application.csproj", "{848CFE69-C2B9-4ACB-83BD-D83BFB92B335}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoManager.Application", "TodoManager.Application\TodoManager.Application.csproj", "{848CFE69-C2B9-4ACB-83BD-D83BFB92B335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoManager.Infrastructure", "ToDoManager.Infrastructure\TodoManager.Infrastructure.csproj", "{F5407720-33C4-4F56-83CD-F548E1B3CC6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{848CFE69-C2B9-4ACB-83BD-D83BFB92B335}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{848CFE69-C2B9-4ACB-83BD-D83BFB92B335}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{848CFE69-C2B9-4ACB-83BD-D83BFB92B335}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5407720-33C4-4F56-83CD-F548E1B3CC6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5407720-33C4-4F56-83CD-F548E1B3CC6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5407720-33C4-4F56-83CD-F548E1B3CC6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5407720-33C4-4F56-83CD-F548E1B3CC6A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
