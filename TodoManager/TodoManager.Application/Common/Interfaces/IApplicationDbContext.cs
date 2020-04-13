@@ -13,6 +13,6 @@ namespace TodoManager.Application.Common.Interfaces
 
         DbSet<User> Users { get; set; }
 
-        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+        Task<int> SaveChangesAsync();
     }
 }

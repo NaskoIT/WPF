@@ -9,5 +9,6 @@ namespace TodoManager.Application.Common.Interfaces
 
         Task<(Result Result, string UserId)> CreateUserAsync(string userName, string password);
 
+        Task<bool> UserExistsByEmailAndPassword(string email, string password);
     }
 }
