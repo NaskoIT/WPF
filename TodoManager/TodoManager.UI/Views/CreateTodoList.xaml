@@ -23,21 +23,6 @@
             </Style.Triggers> 
         </Style>
     </Page.Resources>
-    
-    <!--<TabControl TabStripPlacement="Top">
-        <TabItem Header="Users">
-            <Label Content="Demo User" />
-        </TabItem>
-        <TabItem Header="Courses" />
-        <TabItem Header="Homework" />
-    </TabControl>-->
-
-    <!--<ListView>
-        
-    </ListView>-->
-
-
-
 
     <!--List todo items-->
     <!--<Grid>

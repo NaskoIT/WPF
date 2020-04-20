@@ -23,7 +23,6 @@ namespace TodoManager.UI.Views
         private readonly int todoListId;
         private readonly ObservableCollection<TodoList> todoLists;
 
-
         public TodoListItems(int todoListId)
         {
             InitializeComponent();

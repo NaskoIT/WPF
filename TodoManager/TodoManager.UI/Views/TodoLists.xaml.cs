@@ -15,8 +15,9 @@ namespace TodoManager.UI.Views
 
         private void ShowTodoItems(object sender, RoutedEventArgs e)
         {
-            int todoListId = 1;
-            TodoListItems todoListItems = new TodoListItems(todoListId);
+            Button button = sender as Button;
+            int id = (int)button.DataContext;
+            TodoListItems todoListItems = new TodoListItems(id);
             this.NavigationService.Navigate(todoListItems);
         }
     }

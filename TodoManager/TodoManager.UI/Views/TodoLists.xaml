@@ -8,37 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Home - Todo Manager">
 
-    <Grid Margin="10,0,10,10">
-        <!--<Grid.ColumnDefinitions>
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition />
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Border Grid.Column="0" Grid.Row="0" Height="35" Padding="5" Background="#4E87D4">
-            <Label VerticalAlignment="Center" Foreground="White">Names</Label>
-        </Border>
-        <ListBox Name="peopleListBox" Grid.Column="0" Grid.Row="1">
-            <ListBoxItem>Mike</ListBoxItem>
-            <ListBoxItem>Lisa</ListBoxItem>
-            <ListBoxItem>John</ListBoxItem>
-            <ListBoxItem>Mary</ListBoxItem>
-        </ListBox>
-
-        --><!-- View report button -->
-        <!--<Button Grid.Column="0" Grid.Row="1" Margin="0,319,71,36" Width="125" HorizontalAlignment="Right" Click="ShowTodoItems">View</Button>-->
-
+    <Grid >
         <StackPanel>
-            <RadioButton GroupName="Coupe">Hatchback</RadioButton>
-            <RadioButton GroupName="Coupe">Sedan</RadioButton>
-            <RadioButton GroupName="Coupe">Van</RadioButton>
-            <RadioButton GroupName="Coupe">Limousine</RadioButton>
-            <RadioButton GroupName="Fuel">Gasoline</RadioButton>
-            <RadioButton GroupName="Fuel">Diesel</RadioButton>
-            <RadioButton GroupName="Fuel">Electricity</RadioButton>
+            <ListView Name="TodoLists">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn>
+                            <Button DataContext="{Binding Id}" Click="ShowTodoItems">Show tasks</Button>
+                        </GridViewColumn>
+                    </GridView >
+                </ListView.View>
+            </ListView>
         </StackPanel>
-
     </Grid>
 </Page>

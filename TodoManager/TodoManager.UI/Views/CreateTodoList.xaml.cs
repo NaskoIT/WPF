@@ -19,12 +19,13 @@ namespace TodoManager.UI.Views
         {
             InitializeComponent();
             todoList = Resolve<CreateTodoListViewModel>();
+            todoList.Colour = DefaultColor;
             DataContext = todoList;
         }
 
-        private void SaveTodoList(object sender, System.Windows.RoutedEventArgs e)
+        private async void SaveTodoList(object sender, System.Windows.RoutedEventArgs e)
         {
-            todoList.Create().GetAwaiter().GetResult();
+            await todoList.Create();
         }
     }
 }
