@@ -8,6 +8,22 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CreateTodoList">
 
+    <Page.Resources>
+        <Style x:Key="Btn-Lg" TargetType="Button">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Padding" Value="20"/>
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="50"/>
+            <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red" />
+                    <Setter Property="Width" Value="300"/>
+                    <Setter Property="Height" Value="80"/>
+                </Trigger> 
+            </Style.Triggers> 
+        </Style>
+    </Page.Resources>
+    
     <!--<TabControl TabStripPlacement="Top">
         <TabItem Header="Users">
             <Label Content="Demo User" />
@@ -19,10 +35,10 @@
     <!--<ListView>
         
     </ListView>-->
-    
-       
 
-    
+
+
+
     <!--List todo items-->
     <!--<Grid>
         <Grid.ColumnDefinitions>
@@ -61,7 +77,7 @@
                 </TextBox>
                 <TextBlock>Colour:</TextBlock>
                 <TextBox Text="{Binding Path=Colour}"/>
-                <Button Margin="0,20" ToolTip="Create new todo list">Create todo list</Button>
+                <Button Margin="0,20" ToolTip="Create new todo list" Style="{StaticResource Btn-Lg}">Create todo list</Button>
             </StackPanel>
         </GroupBox>
 
