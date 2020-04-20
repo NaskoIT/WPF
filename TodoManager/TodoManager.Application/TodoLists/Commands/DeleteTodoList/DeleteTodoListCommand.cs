@@ -34,7 +34,7 @@ namespace TodoManager.Application.TodoLists.Commands.DeleteTodoList
                 }
 
                 context.TodoLists.Remove(entity);
-                await context.SaveChangesAsync(cancellationToken);
+                await context.SaveChangesAsync();
 
                 return Unit.Value;
             }

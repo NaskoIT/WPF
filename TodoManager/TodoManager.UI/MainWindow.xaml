@@ -9,4 +9,17 @@
         Height="450" 
         Width="800"
         Source="Views/CreateTodoList.xaml">
+        <NavigationWindow.Resources>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="Validation.ErrorTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Border BorderBrush="Red" BorderThickness="2" VerticalAlignment="Top">
+                                <AdornedElementPlaceholder />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </NavigationWindow.Resources>
 </NavigationWindow>

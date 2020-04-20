@@ -37,7 +37,7 @@ namespace TodoManager.Application.TodoItems.Commands.CreateTodoItem
                 var entity = mapper.Map<TodoItem>(request);
 
                 context.TodoItems.Add(entity);
-                await context.SaveChangesAsync(cancellationToken);
+                await context.SaveChangesAsync();
 
                 return entity.Id;
             }

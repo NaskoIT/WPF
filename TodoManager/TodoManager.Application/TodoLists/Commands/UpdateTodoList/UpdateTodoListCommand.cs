@@ -32,7 +32,7 @@ namespace TodoManager.Application.TodoLists.Commands.UpdateTodoList
                 }
 
                 entity.Title = request.Title;
-                await context.SaveChangesAsync(cancellationToken);
+                await context.SaveChangesAsync();
 
                 return Unit.Value;
             }

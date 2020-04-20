@@ -30,7 +30,7 @@ namespace TodoManager.Application.TodoItems.Commands.DeleteTodoItem
                 }
 
                 context.TodoItems.Remove(entity);
-                await context.SaveChangesAsync(cancellationToken);
+                await context.SaveChangesAsync();
 
                 return Unit.Value;
             }

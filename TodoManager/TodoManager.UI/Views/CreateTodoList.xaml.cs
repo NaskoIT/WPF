@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TodoManager.UI.ViewModels;
 
 namespace TodoManager.UI.Views
 {
@@ -21,6 +22,8 @@ namespace TodoManager.UI.Views
         public CreateTodoList()
         {
             InitializeComponent();
+            DataContext = new CreateTodoListViewModel("Test", "Black");
+
         }
     }
 }

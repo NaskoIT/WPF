@@ -39,7 +39,7 @@ namespace TodoManager.Application.TodoItems.Commands.UpdateTodoItemDetail
                 entity.ListId = request.ListId;
                 entity.Priority = request.Priority;
                 entity.Note = request.Note;
-                await context.SaveChangesAsync(cancellationToken);
+                await context.SaveChangesAsync();
 
                 return Unit.Value;
             }

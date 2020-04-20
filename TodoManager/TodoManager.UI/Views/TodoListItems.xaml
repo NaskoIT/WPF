@@ -9,6 +9,17 @@
       Title="TodoListItems">
 
     <Grid>
-        
+        <StackPanel DockPanel.Dock="Right">
+            <Button Name="AddCar" Click="AddCar_Click">Add</Button> 
+            <ListView Name="ListBoxOfCars">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Title"  Width="200" DisplayMemberBinding="{Binding Title}"/>
+                        <GridViewColumn Header="Colour" Width="200" DisplayMemberBinding="{Binding Colour}"/>
+                    </GridView >
+                    </ListView.View>
+             </ListView>
+        </StackPanel>
+
     </Grid>
 </Page>

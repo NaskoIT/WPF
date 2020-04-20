@@ -27,7 +27,7 @@ namespace TodoManager.Application.TodoLists.Commands.CreateTodoList
                 };
 
                 context.TodoLists.Add(entity);
-                await context.SaveChangesAsync(cancellationToken);
+                await context.SaveChangesAsync();
 
                 return entity.Id;
             }
