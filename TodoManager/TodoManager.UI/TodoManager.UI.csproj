@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TodoManager.Application\TodoManager.Application.csproj" />
     <ProjectReference Include="..\TodoManager.Domain\TodoManager.Domain.csproj" />
     <ProjectReference Include="..\ToDoManager.Infrastructure\TodoManager.Infrastructure.csproj" />
