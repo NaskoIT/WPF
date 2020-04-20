@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TodoManager.Application\TodoManager.Application.csproj" />
     <ProjectReference Include="..\TodoManager.Domain\TodoManager.Domain.csproj" />
+    <ProjectReference Include="..\ToDoManager.Infrastructure\TodoManager.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

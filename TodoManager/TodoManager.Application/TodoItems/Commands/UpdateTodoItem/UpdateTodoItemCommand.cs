@@ -34,7 +34,6 @@ namespace TodoManager.Application.TodoItems.Commands.UpdateTodoItem
                 }
 
                 entity.Title = request.Title;
-                entity.Note = request.Note;
                 await context.SaveChangesAsync();
 
                 return Unit.Value;

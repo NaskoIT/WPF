@@ -10,6 +10,8 @@ namespace TodoManager.Application.TodoLists.Commands.CreateTodoList
     {
         public string Title { get; set; }
 
+        public string Colour { get; set; }
+
         public class CreateTodoListCommandHandler : IRequestHandler<CreateTodoListCommand, int>
         {
             private readonly IApplicationDbContext context;
@@ -23,7 +25,8 @@ namespace TodoManager.Application.TodoLists.Commands.CreateTodoList
             {
                 var entity = new TodoList
                 {
-                    Title = request.Title
+                    Title = request.Title,
+                    Colour = request.Colour
                 };
 
                 context.TodoLists.Add(entity);

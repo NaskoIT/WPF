@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using TodoManager.UI.ViewModels;
+using static TodoManager.UI.DependencyInjection;
+using System;
+using System.Threading.Tasks;
 
 namespace TodoManager.UI.Views
 {
@@ -19,11 +12,19 @@ namespace TodoManager.UI.Views
     /// </summary>
     public partial class CreateTodoList : Page
     {
+        private const string DefaultColor = "Yellow";
+        private readonly CreateTodoListViewModel todoList;
+
         public CreateTodoList()
         {
             InitializeComponent();
-            DataContext = new CreateTodoListViewModel("Test", "Black");
+            todoList = Resolve<CreateTodoListViewModel>();
+            DataContext = todoList;
+        }
 
+        private void SaveTodoList(object sender, System.Windows.RoutedEventArgs e)
+        {
+            todoList.Create().GetAwaiter().GetResult();
         }
     }
 }

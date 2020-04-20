@@ -1,16 +1,19 @@
-﻿using TodoManager.UI.Common;
+﻿using MediatR;
+using System.Threading.Tasks;
+using TodoManager.Application.TodoLists.Commands.CreateTodoList;
+using TodoManager.UI.Common;
 
 namespace TodoManager.UI.ViewModels
 {
     public class CreateTodoListViewModel : NotifyPropertyChanged
     {
+        private readonly IMediator mediator;
         private string title;
         private string colour;
 
-        public CreateTodoListViewModel(string title, string colour)
+        public CreateTodoListViewModel(IMediator mediator)
         {
-            Title = title;
-            Colour = colour;
+            this.mediator = mediator;
         }
 
         public string Title
@@ -31,6 +34,17 @@ namespace TodoManager.UI.ViewModels
                 colour = value;
                 OnPropertyChanged(nameof(Colour));
             }
+        }
+
+        public async Task Create()
+        {
+            var command = new CreateTodoListCommand
+            {
+                Title = Title,
+                Colour = Colour
+            };
+
+            await mediator.Send(command);
         }
     }
 }

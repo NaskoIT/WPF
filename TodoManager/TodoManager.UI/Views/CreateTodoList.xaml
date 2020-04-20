@@ -68,18 +68,12 @@
         <GroupBox Header="Create todo list">
             <StackPanel>
                 <TextBlock>Title:</TextBlock>
-                <TextBox>
-                    <Binding Path="Title">
-                        <Binding.ValidationRules>
-                        </Binding.ValidationRules>
-                    </Binding>
-
+                <TextBox Text="{Binding Path=Title}">
                 </TextBox>
                 <TextBlock>Colour:</TextBlock>
                 <TextBox Text="{Binding Path=Colour}"/>
-                <Button Margin="0,20" ToolTip="Create new todo list" Style="{StaticResource Btn-Lg}">Create todo list</Button>
+                <Button Margin="0,20" ToolTip="Create new todo list" Click="SaveTodoList">Create todo list</Button>
             </StackPanel>
         </GroupBox>
-
     </Grid>
 </Page>
