@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoManager.Services", "Tod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoManager.Models", "TodoManager.Models\TodoManager.Models.csproj", "{828A4DA1-ABE8-4312-AE93-68025D253D29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoManager.Common", "TodoManager.Common\TodoManager.Common.csproj", "{31C4D267-1BD1-4E63-8736-38FFB0C74C44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{828A4DA1-ABE8-4312-AE93-68025D253D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{828A4DA1-ABE8-4312-AE93-68025D253D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{828A4DA1-ABE8-4312-AE93-68025D253D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31C4D267-1BD1-4E63-8736-38FFB0C74C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31C4D267-1BD1-4E63-8736-38FFB0C74C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31C4D267-1BD1-4E63-8736-38FFB0C74C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31C4D267-1BD1-4E63-8736-38FFB0C74C44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

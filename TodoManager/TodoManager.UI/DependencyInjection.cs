@@ -1,7 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
-using TodoManager.Application;
-using TodoManager.Infrastructure;
+using TodoManager.Common;
+using TodoManager.Data;
+using TodoManager.Services;
 using TodoManager.UI.ViewModels;
 
 namespace TodoManager.UI
@@ -16,16 +18,16 @@ namespace TodoManager.UI
         {
             IServiceCollection services = new ServiceCollection();
 
-            services.AddApplication();
-            services.AddInfrastructure();
-            services.AddViewModels();
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(GlobalConstants.ConnectionStrings.Default));
+
+            services.AddTransient<ITodoItemsService, TodoItemsService>();
 
             container = services.BuildServiceProvider();
         }
 
         private static IServiceCollection AddViewModels(this IServiceCollection services)
         {
-            services.AddTransient<CreateTodoListViewModel>();
+            services.AddTransient<TodoItemsViewModel>();
 
             return services;
         }

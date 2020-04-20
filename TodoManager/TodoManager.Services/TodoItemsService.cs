@@ -34,5 +34,13 @@ namespace TodoManager.Services
             context.TodoItems.Add(todoItem);
             context.SaveChanges();
         }
+
+        public void Toggle(int id)
+        {
+            var todoItem = context.TodoItems.Find(id);
+            todoItem.Done = !todoItem.Done;
+            context.TodoItems.Update(todoItem);
+            context.SaveChanges();
+        }
     }
 }

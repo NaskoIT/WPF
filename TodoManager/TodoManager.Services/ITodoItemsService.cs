@@ -8,5 +8,7 @@ namespace TodoManager.Services
         void Create(TodoItemInputModel model);
 
         IEnumerable<TodoItemViewModel> All();
+
+        void Toggle(int id);
     }
 }

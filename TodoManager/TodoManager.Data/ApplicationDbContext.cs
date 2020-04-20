@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
+using TodoManager.Common;
 using TodoManager.Data.Models;
 
 namespace TodoManager.Data
@@ -10,7 +11,7 @@ namespace TodoManager.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(ConnectionStrings.DefaultConnection);
+            optionsBuilder.UseSqlServer(GlobalConstants.ConnectionStrings.Default);
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
