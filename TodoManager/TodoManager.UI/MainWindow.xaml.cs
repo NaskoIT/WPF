@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using TodoManager.UI.Views;
 
 namespace TodoManager.UI
@@ -24,17 +11,22 @@ namespace TodoManager.UI
         public MainWindow()
         {
             InitializeComponent();
-            Main.Content = new TodoLists();
+            Main.Content = new TodoItems();
         }
 
-        private void NavigateToTodoLists(object sender, RoutedEventArgs e)
+        private void NavigateToTasks(object sender, RoutedEventArgs e)
         {
-            Main.Content = new TodoLists();
+            Main.Content = new TodoItems();
         }
 
-        private void NavigateToAddTodoListPage(object sender, RoutedEventArgs e)
+        private void NavigateToMyDay(object sender, RoutedEventArgs e)
         {
-            Main.Content = new CreateTodoList();
+            Main.Content = new MyDay();
+        }
+
+        private void NavigateToImportantTasks(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new ImportantTasks();
         }
     }
 }

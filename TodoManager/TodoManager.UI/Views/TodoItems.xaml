@@ -1,0 +1,80 @@
+﻿<Page x:Class="TodoManager.UI.Views.TodoItems"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TodoManager.UI.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TodoItems">
+
+    <Grid>
+        <ListView Margin="10" Name="TodoItems">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <RadioButton Content="{Binding Done}" Width="20" Height="20"></RadioButton>
+                        <TextBlock Text="{Binding Content}"></TextBlock>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <GroupBox Header="Create todo list" VerticalAlignment="Bottom">
+            <StackPanel>
+                <TextBlock>Content:</TextBlock>
+                <TextBox Text="{Binding Path=Content}" />
+                <Button Margin="0,20" ToolTip="Add todo item" Click="Add"></Button>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+
+    <!--List todo items-->
+    <!--<Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Grid.Column="0">Button 1</Button>
+        <Button Grid.Row="0" Grid.Column="1">Button 2</Button>
+        <Button Grid.Row="1" Grid.Column="0">Button 3</Button>
+        <Button Grid.Row="1" Grid.Column="1">Button 4</Button>
+    </Grid>-->
+
+    <!--Create todo list form-->
+        <!--<StackPanel Margin="10">
+            <TextBox Name="txtValue" />
+            <WrapPanel Margin="0,10">
+                <TextBlock Text="Value: " />
+                <TextBlock Text="{Binding Path=Text, ElementName=txtValue}" />
+            </WrapPanel>
+        </StackPanel>-->
+    <!--<StackPanel DockPanel.Dock="Right">
+        <Button Name="AddCar" Click="AddCar_Click">Add</Button>
+        <ListView Name="ListBoxOfCars">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title"  Width="200" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn Header="Colour" Width="200" DisplayMemberBinding="{Binding Colour}"/>
+                </GridView >
+            </ListView.View>
+        </ListView>
+    </StackPanel>-->
+
+    <!--<StackPanel>
+        <ListView Name="TodoLists">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Title" DisplayMemberBinding="{Binding Title}"/>
+                    <GridViewColumn>
+                        <Button DataContext="{Binding Id}" Click="ShowTodoItems">Show tasks</Button>
+                    </GridViewColumn>
+                </GridView >
+            </ListView.View>
+        </ListView>
+    </StackPanel>-->
+
+</Page>

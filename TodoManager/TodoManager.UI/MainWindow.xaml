@@ -24,8 +24,9 @@
 
     <Grid>
         <StackPanel Width="100" HorizontalAlignment="Left" Background="Blue">
-            <Button Background="AliceBlue" Content="Todo lists" Click="NavigateToTodoLists"></Button>
-            <Button Background="AliceBlue" Content="Add todo list" Click="NavigateToAddTodoListPage"></Button>
+            <Button Background="AliceBlue" Content="Tasks" Click="NavigateToTasks"></Button>
+            <Button Background="AliceBlue" Content="My day" Click="NavigateToMyDay"></Button>
+            <Button Background="AliceBlue" Content="Important" Click="NavigateToImportantTasks"></Button>
         </StackPanel>
         <Frame x:Name="Main" Margin="100,0,0,0"></Frame>
     </Grid>
