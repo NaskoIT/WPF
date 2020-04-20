@@ -7,11 +7,22 @@ namespace TodoManager.Data
 {
     public class ApplicationDbContext : DbContext
     {
+        public ApplicationDbContext()
+        {
+        }
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+        }
+
         public DbSet<TodoItem> TodoItems { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(GlobalConstants.ConnectionStrings.Default);
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(GlobalConstants.ConnectionStrings.Default);
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

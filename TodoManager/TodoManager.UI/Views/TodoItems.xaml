@@ -9,21 +9,27 @@
       Title="TodoItems">
 
     <Grid>
-        <ListView Margin="10" Name="TodoItems">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+        <ListView Margin="10" Grid.Row="0" Name="TodoItemsList">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <WrapPanel>
-                        <RadioButton Content="{Binding Done}" Width="20" Height="20"></RadioButton>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Background="White" BorderBrush="White" Foreground="Red" HorizontalAlignment="Right" DataContext="{Binding Id}" Width="20" Height="20" Click="Delete">X</Button>
+                        <!--<CheckBox DataContext="{Binding Id}" IsChecked="{Binding Path=Done}" Width="20" Height="15" Click="ToggleCompletion"></CheckBox>-->
                         <TextBlock Text="{Binding Content}"></TextBlock>
-                    </WrapPanel>
+                    </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <GroupBox Header="Create todo list" VerticalAlignment="Bottom">
+        
+        <GroupBox Grid.Row="1" Header="Create todo list" Margin="10,10,10,10" VerticalAlignment="Bottom">
             <StackPanel>
                 <TextBlock>Content:</TextBlock>
                 <TextBox Text="{Binding Path=Content}" />
-                <Button Margin="0,20" ToolTip="Add todo item" Click="Add"></Button>
+                <Button Margin="0,5" ToolTip="Add todo item" Click="Add">Add</Button>
             </StackPanel>
         </GroupBox>
     </Grid>

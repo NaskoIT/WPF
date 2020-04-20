@@ -21,6 +21,7 @@ namespace TodoManager.UI
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(GlobalConstants.ConnectionStrings.Default));
 
             services.AddTransient<ITodoItemsService, TodoItemsService>();
+            services.AddViewModels();
 
             container = services.BuildServiceProvider();
         }

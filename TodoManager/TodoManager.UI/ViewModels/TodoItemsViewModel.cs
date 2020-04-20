@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using TodoManager.Common;
 using TodoManager.Models.TodoItems;
 using TodoManager.Services;
-using TodoManager.UI.Common;
 
 namespace TodoManager.UI.ViewModels
 {
@@ -28,17 +29,20 @@ namespace TodoManager.UI.ViewModels
         public IEnumerable<TodoItemViewModel> GetTodoItems() =>
             todoItemsService.All();
 
-        public void AddTodoItem()
+        public TodoItemViewModel AddTodoItem()
         {
             var todoItem = new TodoItemInputModel
             {
                 Content = Content
             };
 
-            todoItemsService.Create(todoItem);
+            Content = string.Empty;
+            return todoItemsService.Create(todoItem);
         }
 
         public void Toggle(int id) => 
             todoItemsService.Toggle(id);
+
+        public void Delete(int id) => todoItemsService.Delete(id);
     }
 }

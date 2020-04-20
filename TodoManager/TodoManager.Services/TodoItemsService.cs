@@ -20,11 +20,12 @@ namespace TodoManager.Services
             .Select(t => new TodoItemViewModel
             {
                 Id = t.Id,
-                Content = t.Content
+                Content = t.Content,
+                Done = t.Done
             })
             .ToList();
 
-        public void Create(TodoItemInputModel model)
+        public TodoItemViewModel Create(TodoItemInputModel model)
         {
             var todoItem = new TodoItem
             {
@@ -32,6 +33,19 @@ namespace TodoManager.Services
             };
 
             context.TodoItems.Add(todoItem);
+            context.SaveChanges();
+
+            return new TodoItemViewModel
+            {
+                Content = model.Content,
+                Id = todoItem.Id
+            };
+        }
+
+        public void Delete(int id)
+        {
+            TodoItem todoItem = context.TodoItems.Find(id);
+            context.TodoItems.Remove(todoItem);
             context.SaveChanges();
         }
 

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
+﻿using System.ComponentModel;
 
-namespace TodoManager.UI.Common
+namespace TodoManager.Common
 {
     public class NotifyPropertyChanged : INotifyPropertyChanged
     {

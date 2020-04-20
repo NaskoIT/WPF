@@ -5,10 +5,12 @@ namespace TodoManager.Services
 {
     public interface ITodoItemsService
     {
-        void Create(TodoItemInputModel model);
+        TodoItemViewModel Create(TodoItemInputModel model);
 
         IEnumerable<TodoItemViewModel> All();
 
         void Toggle(int id);
+
+        void Delete(int id);
     }
 }
